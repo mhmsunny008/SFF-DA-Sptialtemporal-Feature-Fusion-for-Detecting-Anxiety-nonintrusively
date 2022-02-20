@@ -102,21 +102,6 @@ def validate(device, batch_size, model,criterion,
             y_pred_probability.extend(F.sigmoid(out).cpu().detach().numpy())  # 计算softmax，即属于各类的概率
 
 
-            # y_true.extend(target.cpu().numpy())
-            # y_pred_probability.extend(out.cpu().numpy())
-            # print('out.shape = ', out.shape)
-            # print('target.shape = ',target.shape)
-
-    # y_pred_probability_arr = np.array(y_pred_probability_arr)
-    # # print('y_pred_probability_arr.shape = ', y_pred_probability_arr.shape)
-    # for i in range(y_pred_probability_arr.shape[0]):
-    #     # print('y_pred_probability_arr[i].shape = ', y_pred_probability_arr[i].shape)
-    #     # print('y_pred_probability_arr[i] = ', y_pred_probability_arr[i])
-    #     for j in range(len(y_pred_probability_arr[i])):
-    #         max_pred_probability = np.max(y_pred_probability_arr[i][j])
-    #         y_pred_probability.append(max_pred_probability)
-    #         # print('y_pred_probability_arr[i][j] = ', y_pred_probability_arr[i][j])
-    #         # print('max_pred_probability = ', max_pred_probability)
 
     y_pred_probability = np.array(y_pred_probability)
     # print('y_pred  = ', y_pred)

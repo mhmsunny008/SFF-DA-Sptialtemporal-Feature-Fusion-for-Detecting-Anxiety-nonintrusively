@@ -340,43 +340,6 @@ def train():
     print('data_set_eyeRightRIO.shape = ', data_set_eyeRightRIO.shape)
     del data_set_eyeRightRIO_T1, data_set_eyeRightRIO_T2
 
-    # ********************* 4. 头部位姿：数据处理************************************************************* #
-    # 4. 头部位姿：数据处理
-    # data_set_loc_x_T1 = np.load(r'/home/ps/lab-data/MoHaiMiao/2021-05-anxiety_screen-paper2/2021-11-09-dataset_UBFC_Phys/dataset_UBFC_Phys_T1/loc_T1_56_6090_468/'
-    #                           +'loc_x_T1_56_6090_468.npy')
-    # data_set_loc_y_T1 = np.load(r'/home/ps/lab-data/MoHaiMiao/2021-05-anxiety_screen-paper2/2021-11-09-dataset_UBFC_Phys/dataset_UBFC_Phys_T1/loc_T1_56_6090_468/'
-    #                           +'loc_y_T1_56_6090_468.npy')
-    # data_set_loc_z_T1 = np.load(r'/home/ps/lab-data/MoHaiMiao/2021-05-anxiety_screen-paper2/2021-11-09-dataset_UBFC_Phys/dataset_UBFC_Phys_T1/loc_T1_56_6090_468/'
-    #                           +'loc_z_T1_56_6090_468.npy')
-    # data_set_loc_x_T2 = np.load(
-    #     r'/home/ps/lab-data/MoHaiMiao/2021-05-anxiety_screen-paper2/2021-11-09-dataset_UBFC_Phys/dataset_UBFC_Phys_T2/loc_T2_56_6090_468/'
-    #     + 'loc_x_T2_56_6090_468.npy')
-    # data_set_loc_y_T2 = np.load(
-    #     r'/home/ps/lab-data/MoHaiMiao/2021-05-anxiety_screen-paper2/2021-11-09-dataset_UBFC_Phys/dataset_UBFC_Phys_T2/loc_T2_56_6090_468/'
-    #     + 'loc_y_T2_56_6090_468.npy')
-    # data_set_loc_z_T2 = np.load(
-    #     r'/home/ps/lab-data/MoHaiMiao/2021-05-anxiety_screen-paper2/2021-11-09-dataset_UBFC_Phys/dataset_UBFC_Phys_T2/loc_T2_56_6090_468/'
-    #     + 'loc_z_T2_56_6090_468.npy')
-    # loc_arr_T1 = data_pre(data_set_loc_x_T1, data_set_loc_y_T1, data_set_loc_z_T1)
-    # loc_arr_T2 = data_pre(data_set_loc_x_T2, data_set_loc_y_T2, data_set_loc_z_T2)
-    # save_path_T1 = '/home/ps/lab-data/MoHaiMiao/2021-05-anxiety_screen-paper2/2021-11-09-dataset_UBFC_Phys/dataset_UBFC_Phys_T1/loc_T1_56_6090_468/'
-    # save_path_T2 = '/home/ps/lab-data/MoHaiMiao/2021-05-anxiety_screen-paper2/2021-11-09-dataset_UBFC_Phys/dataset_UBFC_Phys_T2/loc_T2_56_6090_468/'
-    # np.save(save_path_T1 + 'loc_distan_T1_56_6090_468' + '.npy',
-    #         np.array(loc_arr_T1))
-    # np.save(save_path_T2 + 'loc_distan_T2_56_6090_468' + '.npy',
-    #         np.array(loc_arr_T2))
-    # print('loc_arr_T1.shape = ', loc_arr_T1.shape) # (56, 6090, 468)
-    # print('loc_arr_T2.shape = ', loc_arr_T2.shape) # (56, 6090, 468)
-    # data_set_loc = np.concatenate((loc_arr_T1, loc_arr_T2), axis=0) #(112, 6090, 468)
-    # print('data_set_loc.shape = ', data_set_loc.shape)
-    # print('data_set_loc_x_T1.shape = ', data_set_loc_x_T1.shape) #(56, 6090, 468)
-    # print('data_set_loc_y_T1.shape = ', data_set_loc_y_T1.shape)
-    # print('data_set_loc_z_T1.shape = ', data_set_loc_z_T1.shape)
-    #
-    # print('data_set_loc_x_T2.shape = ', data_set_loc_x_T2.shape)
-    # print('data_set_loc_y_T2.shape = ', data_set_loc_y_T2.shape)
-    # print('data_set_loc_z_T2.shape = ', data_set_loc_z_T2.shape)
-    # ********************* 4. 头部位姿：数据处理************************************************************* #
 
     # 4.头部位姿：
     loc_arr_T1 = np.load(

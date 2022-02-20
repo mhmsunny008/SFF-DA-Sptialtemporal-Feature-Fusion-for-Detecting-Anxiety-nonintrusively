@@ -433,14 +433,7 @@ def train():
                     # data_set_iPPG_train, data_set_iPPG_test,
                     )
 
-    # ------- RandomForest --------#
-    # from sklearn.ensemble import RandomForestClassifier  # 随机森林
-    # model_RandomForest = RandomForestClassifier()  # 实例化
-    # # model_RandomForest = model_RandomForest.fit(X_train, y_train)  # 用训练集数据训练模型
-    # model_RandomForest.fit(x_train, y_train)
-    # test_predict_label = model_RandomForest.predict_proba(x_test)
-    # preds = model_RandomForest.predict(x_test)  # 导入测试集，从接口中调用需要的信息
-    # ------- RandomForest --------#
+  
 
     # ------- LogisticRegression --------#
     from sklearn.linear_model import LogisticRegression  # 逻辑回归
@@ -458,14 +451,7 @@ def train():
     fpr, tpr, threshold = roc_curve(y_test, test_predict_label[:, 1])  ###计算真正率和假正率
     # fpr, tpr, threshold = roc_curve(y_test, test_predict_label)  ###计算真正率和假正率
     roc_auc = auc(fpr, tpr)  ###计算auc的值，auc就是曲线包围的面积，越大越好
-    ##  log_reg
-    # log_reg = LogisticRegression()
-    # log_reg.fit(x_train, y_labels_train)
-    # preds = log_reg.predict(x_test)
-    # print("log_reg.score(x_train, y_train)= ", log_reg.score(x_train, y_train))  # 精度
-    # print("log_reg.score(x_test, y_test) =  ", log_reg.score(x_test, y_test))  # 精度
-    # print('preds = ', preds)
-
+   
     # 模型性能相关指标
     y_true = y_test
     y_pred_probability = test_predict_label[:, 1]
@@ -500,14 +486,7 @@ def train():
     # save result
     data_result = []
     data_result.append([acc, roc_auc, precision, recall1, sensitivity, fscore1, specificity])
-    # np.savetxt('./data_result_RandomForest_40p_40pixel/RandomForest_fpr' + save_name + '.txt', fpr)
-    # np.savetxt('./data_result_RandomForest_40p_40pixel/RandomForest_tpr' + save_name + '.txt', tpr)
-    # np.savetxt('./data_result_RandomForest_40p_40pixel/RandomForest_data_result' + save_name + '.txt', data_result)
-    # np.savetxt('./data_result_RandomForest_40p_40pixel/RandomForest_y_test' + save_name + '.txt', y_true)
-    # np.savetxt('./data_result_RandomForest_40p_40pixel/RandomForest_y_pred_probability' + save_name + '.txt',
-    #            y_pred_probability)
-    # np.savetxt('./data_result_RandomForest_40p_40pixel/RandomForest_y_pred' + save_name + '.txt', y_pred)
-
+   
     np.savetxt('./data_result_LogisticRegression_40p_40pixel/LogisticRegression_fpr' + save_name + '.txt', fpr)
     np.savetxt('./data_result_LogisticRegression_40p_40pixel/LogisticRegression_tpr' + save_name + '.txt', tpr)
     np.savetxt('./data_result_LogisticRegression_40p_40pixel/LogisticRegression_data_result' + save_name + '.txt', data_result)

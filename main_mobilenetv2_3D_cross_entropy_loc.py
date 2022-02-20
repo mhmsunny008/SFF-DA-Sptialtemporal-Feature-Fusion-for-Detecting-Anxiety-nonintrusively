@@ -98,21 +98,6 @@ def validate(device, batch_size, model,criterion,
             y_pred_probability.extend(F.sigmoid(out).cpu().detach().numpy())  # 计算softmax，即属于各类的概率
 
 
-            # y_true.extend(target.cpu().numpy())
-            # y_pred_probability.extend(out.cpu().numpy())
-            # print('out.shape = ', out.shape)
-            # print('target.shape = ',target.shape)
-
-    # y_pred_probability_arr = np.array(y_pred_probability_arr)
-    # # print('y_pred_probability_arr.shape = ', y_pred_probability_arr.shape)
-    # for i in range(y_pred_probability_arr.shape[0]):
-    #     # print('y_pred_probability_arr[i].shape = ', y_pred_probability_arr[i].shape)
-    #     # print('y_pred_probability_arr[i] = ', y_pred_probability_arr[i])
-    #     for j in range(len(y_pred_probability_arr[i])):
-    #         max_pred_probability = np.max(y_pred_probability_arr[i][j])
-    #         y_pred_probability.append(max_pred_probability)
-    #         # print('y_pred_probability_arr[i][j] = ', y_pred_probability_arr[i][j])
-    #         # print('max_pred_probability = ', max_pred_probability)
 
     y_pred_probability = np.array(y_pred_probability)
     print('y_pred_probability  = ', y_pred_probability)
@@ -454,46 +439,7 @@ def data_downsample(index_arr, label_set,
     data_eyeLeft = data_eyeLeft.transpose((0, 4, 1, 2, 3))
     data_eyeRightRIO = data_eyeRightRIO.transpose((0, 4, 1, 2, 3))
     data_forehead = data_forehead.transpose((0, 4, 1, 2, 3))
-    #
-    # print('data_mouth.shape = ', data_mouth.shape)
-    # print('data_eyeLeft.shape = ', data_eyeLeft.shape)
-    # print('data_eyeRightRIO.shape = ', data_eyeRightRIO.shape)
-    # print('data_head.shape = ', data_head.shape)
-    # print('data_location.shape = ', data_location.shape)
-    # # 索引打乱
-    # print('data_mouth.shape =', data_mouth.shape)
-    # import random
-    # index = []
-    # for i in range(data_mouth.shape[0]):
-    #     index.append(i)
-    # random.shuffle(index)
-    # print('index= ', index)
-    # mouth = []
-    # eyeLeft = []
-    # eyeRightRIO = []
-    # forehead = []
-    # location = []
-    # label = []
-    # for j in range(len(index)):
-    #     mouth.append(data_mouth[index[j]])
-    #     eyeLeft.append(data_eyeLeft[index[j]])
-    #     eyeRightRIO.append(data_eyeRightRIO[index[j]])
-    #     location.append(data_location[index[j]])
-    #     forehead.append(data_head[index[j]])
-    #     label.append(label_arr[index[j]])
-    #
-    # mouth = np.array(mouth)
-    # eyeLeft = np.array(eyeLeft)
-    # eyeRightRIO = np.array(eyeRightRIO)
-    # forehead = np.array(forehead)
-    # location = np.array(location)
-    # label = np.array(label)
-    # mouth = mouth.transpose((0, 4, 1, 2, 3))
-    # eyeLeft = eyeLeft.transpose((0, 4, 1, 2, 3))
-    # eyeRightRIO = eyeRightRIO.transpose((0, 4, 1, 2, 3))
-    # forehead = forehead.transpose((0, 4, 1, 2, 3))
 
-    # return mouth, eyeLeft, eyeRightRIO, forehead, location,label
     return data_mouth, data_eyeLeft, data_eyeRightRIO, data_forehead, data_location,label_arr
 def down_sample(label, data_set_mouthRIO_mod4_0):
     label_axniety = []

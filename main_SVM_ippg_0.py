@@ -457,34 +457,6 @@ def train():
                y_pred_probability)
 
 
-    # np.savetxt('./data_result_SVM_40p_40pixel/SVM_fpr_0' + save_name + '.txt', fpr)
-    # np.savetxt('./data_result_SVM_40p_40pixel/SVM_tpr_0' + save_name + '.txt', tpr)
-    # np.savetxt('./data_result_SVM_40p_40pixel/SVM_data_result_0' + save_name + '.txt', data_result)
-    # np.savetxt('./data_result_SVM_40p_40pixel/SVM_y_test_0' + save_name + '.txt', y_true)
-    # np.savetxt('./data_result_SVM_40p_40pixel/SVM_y_pred_probability_0' + save_name + '.txt',
-    #            y_pred_probability)
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre/SVM_y_pred' + save_name + '.txt', y_pred)
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre/SVM_fpr' + save_name + '.txt', fpr)
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre/SVM_tpr' + save_name + '.txt', tpr)
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre/SVM_data_result' + save_name + '.txt', data_result)
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre/SVM_y_test' + save_name + '.txt', y_true)
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre/SVM_y_pred_probability' + save_name + '.txt',
-    #            y_pred_probability)
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre/SVM_y_pred' + save_name + '.txt', y_pred)
-
-
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre_normalize/SVM_fpr' + save_name + '.txt', fpr)
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre_normalize/SVM_tpr' + save_name + '.txt', tpr)
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre_normalize/SVM_data_result' + save_name + '.txt', data_result)
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre_normalize/SVM_y_test' + save_name + '.txt', y_true)
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre_normalize/SVM_y_pred_probability' + save_name + '.txt',
-    #            y_pred_probability)
-    # np.savetxt('./data_result_SVM_40p_40pixel_ippgSignalPre_normalize/SVM_y_pred' + save_name + '.txt', y_pred)
-    # 保存模型  data_result_AA_Resnet50_20p_20pixel
-    # torch.save(model,
-    #            './data_result_SVM_40p_40pixel/SVM_mod4_0_1_anxiety_screeen' + save_name + '.pkl')
-
-
 if __name__ == "__main__":
     # train constants
    train()
